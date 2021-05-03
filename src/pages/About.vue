@@ -1,19 +1,11 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <Brief />
 </template>
 
-<script>
+<script lang="ts">
+import Brief from "@/components/About/Brief.vue";
 export default {
-  async setup() {
-    return {
-      msg: 'About'
-    }
-  }
+  name: "About",
+  components: { Brief },
 }
 </script>
-
-<style scoped>
-h1 {
-  color: red;
-}
-</style>

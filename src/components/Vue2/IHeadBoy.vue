@@ -62,22 +62,20 @@ $i-head-boy-feets-color = $dark-gray;
     height: 20px;
     border-radius: 50%;
     background-color: $i-head-boy-feets-color;
+    z-index: 1;
   }
 
   &::before {
     left: 25px;
-    z-index: -1;
   }
 
   &::after {
     left: 45px;
-    z-index: -1;
   }
 
   &.moving {
     &::before {
       animation: feets-left 1.2s infinite;
-      z-index: 1;
     }
 
     &::after {

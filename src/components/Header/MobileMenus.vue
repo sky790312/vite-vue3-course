@@ -15,7 +15,8 @@ export default {
     const onMobileMenuClose = () =>
       emit("onMobileMenuClose", isMobileMenuOpen.value);
 
-    const onMobileMenuClick = (menu) => {
+    const onMobileMenuClick = (navigate) => {
+      navigate();
       onMobileMenuClose();
     };
 
@@ -35,7 +36,6 @@ export default {
       <div :class="$style.iconContainer">
         <button :class="$style.iconOuter" @click="onMobileMenuClose()">
           <svg
-            :class="$style.iconInner"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -52,14 +52,20 @@ export default {
         </button>
       </div>
       <div :class="$style.menuItemContainer">
-        <a
+        <router-link
           v-for="headerMenu in headerMenus"
-          :class="$style.menuItem"
           :key="headerMenu.name"
-          :href="`#${headerMenu.name}`"
-          @click="onMobileMenuClick(headerMenu.name)"
-          >{{ headerMenu.text }}</a
+          :to="headerMenu.url"
+          v-slot="{ href, navigate, isActive }"
         >
+          <a
+            :class="[$style.menuItem, isActive && 'router-link-active']"
+            :href="href"
+            @click="onMobileMenuClick(navigate)"
+            >
+            {{ headerMenu.text }}
+          </a>
+        </router-link>
       </div>
     </div>
   </div>
@@ -67,64 +73,34 @@ export default {
 
 <style module>
 .mobileMenusContainer {
-  @apply absolute;
-  @apply top-0;
-  @apply inset-x-0;
-  @apply p-2;
-  @apply transition;
-  @apply transform;
-  @apply origin-top-right;
-  @apply md:hidden;
+  @apply md:hidden z-10;
+  @apply absolute top-0 inset-x-0 origin-top-right;
+  @apply p-2 transition transform;
 }
 
 .mobileMenusInnerContainer {
-  @apply rounded-lg;
-  @apply shadow-md;
-  @apply bg-white;
-  @apply ring-1;
-  @apply ring-black;
-  @apply ring-opacity-5;
   @apply overflow-hidden;
+  @apply rounded-lg shadow-md bg-white;
+  @apply ring-1 ring-black ring-opacity-5;
 }
 
 .iconContainer {
-  @apply px-5;
-  @apply pt-4;
-  @apply flex;
-  @apply items-center;
-  @apply justify-end;
+  @apply flex items-center justify-end;
+  @apply px-5 pt-4;
 }
 
 .iconOuter {
-  @apply -mr-2;
-  @apply p-2;
-  @apply bg-white;
-  @apply rounded-md;
-  @apply inline-flex;
-  @apply items-center;
-  @apply justify-center;
-  @apply text-gray-400;
-}
-
-.iconInner {
-  @apply h-6;
-  @apply w-6;
+  @apply inline-flex items-center justify-center;
+  @apply p-2 -mr-2;
+  @apply bg-white text-gray-500 rounded-md;
 }
 
 .menuItemContainer {
-  @apply px-2;
-  @apply pt-2;
-  @apply pb-3;
-  @apply space-y-1;
+  @apply p-2 space-y-1;
 }
 
 .menuItem {
-  @apply block;
-  @apply px-3;
-  @apply py-2;
-  @apply rounded-md;
-  @apply text-base;
-  @apply font-medium;
-  @apply text-gray-700;
+  @apply block px-3 py-2;
+  @apply rounded-md text-base font-medium;
 }
 </style>

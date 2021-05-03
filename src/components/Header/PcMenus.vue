@@ -11,13 +11,20 @@ export default {
 
 <template>
   <div :class="$style.pcMenuContainer">
-    <a
+    <router-link
       v-for="headerMenu in headerMenus"
-      :class="$style.pcMenuItem"
       :key="headerMenu.name"
-      :href="`#${headerMenu.name}`"
-      >{{ headerMenu.text }}</a
+      :to="headerMenu.url"
+      v-slot="{ href, navigate, isActive }"
     >
+      <a
+        :class="[$style.pcMenuItem, isActive && 'router-link-active']"
+        :href="href"
+        @click="navigate"
+        >
+        {{ headerMenu.text }}
+      </a>
+    </router-link>
   </div>
 </template>
 

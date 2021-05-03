@@ -6,9 +6,8 @@ export default {
 
 <template>
   <div :class="$style.mobileMenuIconContainer">
-    <button :class="$style.iconOuter">
+    <button :class="$style.menuIcon">
       <svg
-        :class="$style.iconInner"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -34,14 +33,10 @@ export default {
   @apply md:hidden;
 }
 
-.iconOuter {
+.menuIcon {
   @apply inline-flex items-center justify-center;
   @apply bg-white rounded-md p-2 text-gray-400;
   @apply hover:text-gray-500 hover:bg-gray-100;
-  @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500;
-}
-
-.iconInner {
-  @apply h-6 w-6;
+  @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600;
 }
 </style>

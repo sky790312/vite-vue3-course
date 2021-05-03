@@ -21,18 +21,26 @@ export default {
 <template>
   <div :class="$style.appContainer">
     <Header />
-    <router-view v-slot="{ Component }">
-      <Suspense>
-        <component :is="Component" />
-      </Suspense>
-    </router-view>
+    <div :class="$style.contentContainer">
+      <router-view v-slot="{ Component }">
+        <Suspense>
+          <component :is="Component" />
+        </Suspense>
+      </router-view>
+    </div>
     <Footer />
   </div>
 </template>
 
 <style module>
 .appContainer {
-  @apply relative bg-white overflow-hidden;
+  @apply flex flex-col;
+  @apply h-full bg-gray-100;
+}
+.contentContainer {
+  @apply flex-grow overflow-y-auto;
+  @apply text-center text-lg;
+  @apply mt-16 md:mt-32 mb-12 px-2;
 }
 </style>
 
