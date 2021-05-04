@@ -1,13 +1,14 @@
 <script lang="ts">
 import { onMounted } from "vue";
 import { useStore } from "vuex";
-import Header from "@/components/Header/Header.vue";
-import Footer from "@/components/Footer.vue";
+import Header from "@/components/appCommon/Header/Header.vue";
+import Footer from "@/components/appCommon/Footer.vue";
+import AppBackground from "@/components/appCommon/AppBackground.vue";
 import { State } from "@/store";
 
 export default {
   name: "App",
-  components: { Header, Footer },
+  components: { Header, Footer, AppBackground },
   setup() {
     const { dispatch } = useStore<State>();
 
@@ -29,18 +30,18 @@ export default {
       </router-view>
     </div>
     <Footer />
+    <AppBackground />
   </div>
 </template>
 
 <style module>
 .appContainer {
-  @apply flex flex-col;
-  @apply h-full bg-gray-100;
+  @apply flex flex-col h-full;
+  @apply text-gray-300;
 }
 .contentContainer {
-  @apply flex-grow overflow-y-auto;
+  @apply flex-grow overflow-y-auto container mx-auto;
   @apply text-center text-lg;
-  @apply mt-16 md:mt-32 mb-12 px-2;
+  @apply px-2 py-16 md:py-32;
 }
 </style>
-

@@ -1,5 +1,5 @@
 <script lang="ts">
-import { headerMenus } from "@/components/Header/constants";
+import { headerMenus } from "@/components/appCommon/Header/constants";
 
 export default {
   name: "PcMenus",
@@ -34,7 +34,7 @@ export default {
 }
 
 .pcMenuItem {
-  @apply font-medium text-gray-500;
-  @apply hover:text-gray-900;
+  @apply font-medium text-white;
+  @apply hover:text-gray-300;
 }
 </style>

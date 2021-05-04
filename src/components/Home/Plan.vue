@@ -38,8 +38,8 @@ export default {
 
 .planItem {
   @apply mx-2 mb-4 p-4 border rounded cursor-pointer;
-  @apply transition border-indigo-600 text-gray-500;
-  @apply hover:bg-indigo-600 hover:text-white;
+  @apply transition border-indigo-600 text-white;
+  @apply hover:bg-indigo-600;
 }
 .planCustomDesc {
   @apply mb-8 text-base;

@@ -27,16 +27,12 @@ export default {
 
 <style module>
 .mobileMenuIconContainer {
-  @apply -mr-2;
-  @apply flex;
-  @apply items-center;
-  @apply md:hidden;
+  @apply flex items-center;
+  @apply -mr-2 md:hidden;
 }
 
 .menuIcon {
   @apply inline-flex items-center justify-center;
-  @apply bg-white rounded-md p-2 text-gray-400;
-  @apply hover:text-gray-500 hover:bg-gray-100;
-  @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600;
+  @apply bg-white rounded-md p-2 text-gray-500;
 }
 </style>

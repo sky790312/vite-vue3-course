@@ -24,25 +24,16 @@ export default {
   @apply mx-auto mb-2;
 }
 .titleWrapper {
+  @apply font-extrabold text-white tracking-tight text-4xl;
   @apply my-8;
-  @apply text-4xl;
-  /* @apply text-4xl sm:text-5xl md:text-6xl; */
-  @apply font-extrabold text-gray-900 tracking-tight;
 }
 
 .titleHighlight {
-  @apply block xl:inline text-indigo-600;
+  @apply block xl:inline text-indigo-400;
 }
 
 .desc {
   @apply mb-4;
-  @apply text-base text-gray-500;
-}
-
-.ctaButton {
-  @apply flex items-center justify-center;
-  @apply mb-4 md:py-4 md:px-10 px-8 py-3;
-  @apply border border-transparent rounded-md;
-  @apply text-base font-medium bg-indigo-600;
+  @apply text-base text-gray-300;
 }
 </style>

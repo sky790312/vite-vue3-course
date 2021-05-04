@@ -51,7 +51,7 @@ export default {
 
 <style module>
 .footerContainer {
-  @apply text-center mx-auto py-2;
+  @apply text-center mx-auto py-2 text-white font-bold;
 }
 .personalInfoContainer {
   @apply flex mb-2;

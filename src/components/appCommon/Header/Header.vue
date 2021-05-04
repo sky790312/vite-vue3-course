@@ -1,7 +1,7 @@
 <script lang="ts">
-import PcMenus from "@/components/Header/PcMenus.vue";
-import MobileMenus from "@/components/Header/MobileMenus.vue";
-import MobileHeaderIcon from "@/components/Header/MobileHeaderIcon.vue";
+import PcMenus from "@/components/appCommon/Header/PcMenus.vue";
+import MobileMenus from "@/components/appCommon/Header/MobileMenus.vue";
+import MobileHeaderIcon from "@/components/appCommon/Header/MobileHeaderIcon.vue";
 import { ref } from "vue";
 
 export default {
@@ -68,7 +68,7 @@ export default {
 }
 
 .mainTitle {
-  @apply text-4xl tracking-tight font-extrabold text-gray-900;
+  @apply text-4xl tracking-tight font-extrabold text-white;
   @apply sm:text-5xl md:text-6xl;
 }
 </style>

@@ -10,6 +10,7 @@ html,
 }
 
 #app {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,8 +19,9 @@ html,
 svg {
   height: 1.5rem;
   width: 1.5rem;
+  fill: #fff;
 }
 
 .router-link-active {
-  opacity: 0.8;
+  text-decoration: underline;
 }

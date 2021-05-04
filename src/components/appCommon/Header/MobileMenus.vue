@@ -1,6 +1,6 @@
 <script lang="ts">
 import { ref, SetupContext } from "vue";
-import { headerMenus } from "@/components/Header/constants";
+import { headerMenus } from "@/components/appCommon/Header/constants";
 
 type EmitOption = "onMobileMenuClose";
 type Props = { isMobileMenuOpen: boolean };
@@ -79,8 +79,8 @@ export default {
 }
 
 .mobileMenusInnerContainer {
-  @apply overflow-hidden;
-  @apply rounded-lg shadow-md bg-white;
+  @apply overflow-hidden pb-4;
+  @apply rounded-lg shadow-md bg-gray-700;
   @apply ring-1 ring-black ring-opacity-5;
 }
 
@@ -92,7 +92,7 @@ export default {
 .iconOuter {
   @apply inline-flex items-center justify-center;
   @apply p-2 -mr-2;
-  @apply bg-white text-gray-500 rounded-md;
+  @apply rounded-md;
 }
 
 .menuItemContainer {
@@ -101,6 +101,6 @@ export default {
 
 .menuItem {
   @apply block px-3 py-2;
-  @apply rounded-md text-base font-medium;
+  @apply rounded-md text-white font-medium;
 }
 </style>
