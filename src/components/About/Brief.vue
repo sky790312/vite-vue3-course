@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  name: "Brief"
+  name: "Brief",
 };
 </script>
 
@@ -15,31 +15,29 @@ export default {
       <span :class="$style.highlight">前端職涯方向分析與建議</span>
     </div>
     <div :class="$style.flowContainer">
-      <div :class="$style.flowItem">
-        事前的背景了解與確認問題
-      </div>
+      <div :class="$style.flowItem">事前的背景了解與確認問題</div>
       <p>↓</p>
       <div :class="$style.flowItem">
-        第一次半小時的免費試課
+        敲定第一次時間細節面談＆一小時的免費試課
       </div>
       <p>↓</p>
-      <div :class="$style.flowItem">
-        實體面對面開始
-      </div>
+      <div :class="$style.flowItem">實體面對面開始</div>
       <p>↓</p>
-      <div :class="$style.flowItem">
-        結束與雙方反饋
-      </div>
+      <div :class="$style.flowItem">結束與雙方反饋</div>
       <p>↓</p>
-      <div :class="$style.flowItem">
-        未來的再次服務
-      </div>
+      <div :class="$style.flowItem">未來的再次服務</div>
     </div>
     <p>
-      從第一份工作開始變開啟前端之路，目前已經是約 8 年多的前端工作經驗老骨頭。一直以來對於教學相長充滿熱情，擔任過家教接過案，不論是 vue 還是 react 都用的得心應手。
+      從第一份工作開始變開啟前端之路，目前已經是約 8
+      年多的前端工作經驗老骨頭。一直以來對於教學相長充滿熱情，擔任過家教接過案，不論是
+      vue 還是 react 都用的得心應手。
     </p>
-    <p>但這裡不是救火營，勿以解決當下思維，若問題超出範圍或者實在沒有時間安排也不用擔心，這兒也有許多前端好手能一起來為大家服務與解惑。</p>
-    <p>簡言之，希望能打造一個生生不息循環的生態系，能將自身所學與經驗回饋給前端領域的大家們，未來的你也能將其經驗傳承下去。</p>
+    <p>
+      但這裡不是救火營，勿以解決當下思維，若問題超出範圍或者實在沒有時間安排也不用擔心，這兒也有許多前端好手能一起來為大家服務與解惑。
+    </p>
+    <p>
+      簡言之，希望能打造一個生生不息循環的生態系，能將自身所學與經驗回饋給前端領域的大家們，未來的你也能將其經驗傳承下去。
+    </p>
     <p>最後有機會的話來交個朋友吧！🔥</p>
   </div>
 </template>
