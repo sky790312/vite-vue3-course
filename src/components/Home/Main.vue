@@ -33,7 +33,6 @@ export default {
         >客製化洽詢</a
       >！
     </p>
-    <!-- <a href="#" :class="$style.ctaButton">我有興趣</a> -->
   </main>
 </template>
 

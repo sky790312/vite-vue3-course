@@ -12,7 +12,7 @@ export default {
 <template>
   <div>
     <p>
-      本人行事比較低調，擅長 vue / react + typescript 雙刀流，幸運的擔任過 2017
+      本人行事比較低調，主要擅長 vue / react + typescript，幸運的擔任過 2017
       JSDC 的講者與代表公司前往巴賽隆納 MWC
       。另外在練習寫英文文章的情況下，也曾被收錄了一篇 2017 vue top 50
       post。畢業當完兵後一直以來都專注在前端領域（過程也碰了許多後端 knowledge

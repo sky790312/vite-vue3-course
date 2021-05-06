@@ -26,6 +26,11 @@ svg {
   cursor: default;
 }
 
+.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 ::-webkit-input-placeholder {
   text-align: center;
 }
