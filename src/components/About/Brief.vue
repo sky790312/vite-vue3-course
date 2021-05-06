@@ -1,6 +1,11 @@
 <script lang="ts">
+import { flows } from "@/components/About/constants";
+
 export default {
   name: "Brief",
+  setup() {
+    return { flows };
+  },
 };
 </script>
 
@@ -15,17 +20,12 @@ export default {
       <span :class="$style.highlight">前端職涯方向分析與建議</span>
     </div>
     <div :class="$style.flowContainer">
-      <div :class="$style.flowItem">事前的背景了解與確認問題</div>
-      <p>↓</p>
-      <div :class="$style.flowItem">
-        敲定第一次時間細節面談＆一小時的免費試課
-      </div>
-      <p>↓</p>
-      <div :class="$style.flowItem">實體面對面開始</div>
-      <p>↓</p>
-      <div :class="$style.flowItem">結束與雙方反饋</div>
-      <p>↓</p>
-      <div :class="$style.flowItem">未來的再次服務</div>
+      <template v-for="(flow, index) in flows" :key="flow.id">
+        <div :class="$style.flowItem">
+          {{ flow.text }}
+        </div>
+        <p v-if="index !== flows.length - 1">↓</p>
+      </template>
     </div>
     <p>
       從第一份工作開始變開啟前端之路，目前已經是約 8
@@ -46,12 +46,15 @@ export default {
 .highlightContainer {
   @apply my-4;
 }
+
 .highlight {
   @apply py-2 text-2xl text-indigo-400 font-bold;
 }
+
 .flowContainer {
-  @apply my-8;
+  @apply my-12;
 }
+
 .flowItem {
   @apply md:w-1/3 mx-auto my-2 p-4 border rounded;
   @apply transition border-indigo-600 text-white;

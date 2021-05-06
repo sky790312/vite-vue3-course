@@ -39,6 +39,7 @@ export default {
   @apply flex flex-col h-full;
   @apply text-gray-300;
 }
+
 .contentContainer {
   @apply flex-grow overflow-y-auto container mx-auto;
   @apply text-center text-lg;

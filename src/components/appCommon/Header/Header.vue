@@ -27,15 +27,12 @@ export default {
   <div :class="$style.headerContainer">
     <nav :class="$style.headerInnerContainer">
       <div :class="$style.mainTitleContainer">
-        <router-link
-          to="/"
-          v-slot="{ href, navigate, isActive }"
-        >
+        <router-link to="/" v-slot="{ href, navigate, isActive }">
           <a
             :class="[$style.pcMenuItem, isActive && 'router-link-active']"
             :href="href"
             @click="navigate"
-            >
+          >
             <h1 :class="$style.mainTitle">KevinHu</h1>
           </a>
         </router-link>
@@ -53,6 +50,7 @@ export default {
     />
   </div>
 </template>
+
 <style module>
 .headerContainer {
   @apply relative py-5 text-center;

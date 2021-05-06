@@ -23,5 +23,9 @@ svg {
 }
 
 .router-link-active {
-  text-decoration: underline;
+  cursor: default;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
 }

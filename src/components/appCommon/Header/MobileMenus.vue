@@ -62,7 +62,7 @@ export default {
             :class="[$style.menuItem, isActive && 'router-link-active']"
             :href="href"
             @click="onMobileMenuClick(navigate)"
-            >
+          >
             {{ headerMenu.text }}
           </a>
         </router-link>

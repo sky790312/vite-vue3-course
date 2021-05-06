@@ -21,7 +21,7 @@ export default {
         :class="[$style.pcMenuItem, isActive && 'router-link-active']"
         :href="href"
         @click="navigate"
-        >
+      >
         {{ headerMenu.text }}
       </a>
     </router-link>
