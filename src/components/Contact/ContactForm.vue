@@ -14,6 +14,10 @@ export default {
     const hasSend = ref(false);
     const isLoading = ref(false);
     const send = async (e: HTMLFormElement) => {
+      if (isLoading.value) {
+        return;
+      }
+
       isLoading.value = true;
       try {
         await emailjs.sendForm(
