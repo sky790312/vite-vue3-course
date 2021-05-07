@@ -2,13 +2,10 @@
   "name": "my-vue-app",
   "version": "0.0.0",
   "scripts": {
-    "dev": "node server",
-    "build": "yarn build:client && yarn build:server",
-    "build:client": "vite build --ssrManifest --outDir dist/client",
-    "build:server": "vite build --ssr src/entry-server.js --outDir dist/server",
-    "generate": "vite build --ssrManifest --outDir dist/static && yarn build:server && node prerender",
-    "serve": "cross-env NODE_ENV=production node server",
-    "debug": "node --inspect-brk server"
+    "dev": "vite",
+    "build": "vite build",
+    "debug": "node --inspect-brk ../../vite/bin/vite",
+    "preview": "vite preview"
   },
   "dependencies": {
     "emailjs-com": "^2.6.4",

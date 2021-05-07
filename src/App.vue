@@ -23,11 +23,7 @@ export default {
   <div :class="$style.appContainer">
     <Header />
     <div :class="$style.contentContainer">
-      <router-view v-slot="{ Component }">
-        <Suspense>
-          <component :is="Component" />
-        </Suspense>
-      </router-view>
+      <router-view />
     </div>
     <Footer />
     <AppBackground />
