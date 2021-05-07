@@ -25,7 +25,9 @@ export default {
     <div :class="$style.contentContainer">
       <router-view v-slot="{ Component }">
         <Suspense>
-          <component :is="Component" />
+          <transition name="bounce" mode="out-in">
+            <component :is="Component" />
+          </transition>
         </Suspense>
       </router-view>
     </div>
