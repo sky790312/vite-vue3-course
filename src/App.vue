@@ -23,7 +23,11 @@ export default {
   <div :class="$style.appContainer">
     <Header />
     <div :class="$style.contentContainer">
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <transition name="bounce" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </div>
     <Footer />
     <AppBackground />
