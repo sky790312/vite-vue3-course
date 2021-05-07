@@ -26,4 +26,9 @@ const routes = [
 export default createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    setTimeout(() => {
+      document.getElementById("content").scrollTo(0, 0);
+    }, 500);
+  },
 });

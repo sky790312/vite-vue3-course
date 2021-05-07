@@ -22,7 +22,7 @@ export default {
 <template>
   <div :class="$style.appContainer">
     <Header />
-    <div :class="$style.contentContainer">
+    <div id="content" :class="$style.contentContainer">
       <router-view v-slot="{ Component }">
         <transition name="bounce" mode="out-in">
           <component :is="Component" />

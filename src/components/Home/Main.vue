@@ -60,7 +60,7 @@ export default {
 }
 
 .planItem {
-  @apply mx-2 mb-4 p-4 border rounded cursor-pointer;
+  @apply mx-2 mb-4 p-4 border rounded;
   @apply transition border-indigo-600 text-white;
   @apply hover:bg-indigo-600;
 }
