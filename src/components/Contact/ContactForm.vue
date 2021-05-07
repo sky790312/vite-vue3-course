@@ -14,6 +14,10 @@ export default {
     const hasSend = ref(false);
     const isLoading = ref(false);
     const send = async (e: HTMLFormElement) => {
+      if (isLoading.value) {
+        return;
+      }
+
       isLoading.value = true;
       try {
         await emailjs.sendForm(
@@ -108,10 +112,6 @@ export default {
 
 .formBtn {
   @apply bg-indigo-400 text-white;
-
-  &.disabled {
-    @apply opacity-30 cursor-wait;
-  }
 }
 
 .successContainer {
