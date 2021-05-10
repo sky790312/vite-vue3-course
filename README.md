@@ -6,7 +6,7 @@ Frontend staff consultation site - vue, react, typescript, wordpress..etc for ju
 
 - pending to use ssr build and deploy. (check ssr-build-pending branch).
 
-![image](https://github.com/sky790312/vite-vue3-course/blob/master/%E6%88%AA%E5%9C%96%202021-05-10%20%E4%B8%8B%E5%8D%883.44.55.png)
+![image](https://github.com/sky790312/vite-vue3-course/blob/master/%E6%88%AA%E5%9C%96%202021-05-10%20%E4%B8%8B%E5%8D%883.53.10.png)
 
 # Vue 3 + Typescript + Vite
 
